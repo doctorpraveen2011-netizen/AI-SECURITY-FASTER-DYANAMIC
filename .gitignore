@@ -1,0 +1,40 @@
+# Environments & Dependencies
+backend/venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node & Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database & Runtime Data
+*.db
+*.sqlite3
+ai_security.db
+backend/sandbox_data/*
+!backend/sandbox_data/.gitkeep
+backend/knowledge_base/*
+!backend/knowledge_base/.gitkeep
+
+# Environment Variables & Secrets
+.env
+*.local
+
+# Testing & Cache
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+Thumbs.db

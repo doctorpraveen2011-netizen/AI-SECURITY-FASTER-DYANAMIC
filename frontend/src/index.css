@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0A0A0C;
+    color: #F8FAFC;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom glowing and SOC scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0E1015;
+}
+::-webkit-scrollbar-thumb {
+  background: #252A36;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF8A00;
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px -2px rgba(255, 138, 0, 0.35);
+}
+
+.glow-orange-border {
+  border-color: rgba(255, 138, 0, 0.4);
+  box-shadow: 0 0 15px -3px rgba(255, 138, 0, 0.2);
+}
+
+.glow-green {
+  box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.3);
+}
+
+.glow-red {
+  box-shadow: 0 0 15px -3px rgba(239, 68, 68, 0.3);
+}
+
+/* Neon wireframe pulsing brain animation */
+@keyframes brain-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 12px rgba(255, 138, 0, 0.45));
+    opacity: 0.95;
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(255, 138, 0, 0.75));
+    opacity: 1;
+  }
+}
+
+.animate-brain {
+  animation: brain-pulse 4s ease-in-out infinite;
+}
